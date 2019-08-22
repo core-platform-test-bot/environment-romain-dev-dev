@@ -1,17 +1,22 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
+  clusterName: romain-dev
+  environmentGitOwner: core-platform-test-bot
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: apps-dev-229310
   provider: gke
-  zone: ""
-gitops: true
+  zone: europe-west1-d
 environments:
 - key: dev
 - key: staging
 - key: production
+gitops: true
 ingress:
-  domain: ""
+  domain: 35.205.140.56.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
@@ -21,13 +26,13 @@ secretStorage: vault
 storage:
   logs:
     enabled: true
-    url: ""
+    url: gs://romain-dev-logs-a6d8f32a-9692-4124-a816-e6f8b3462470
   reports:
     enabled: true
-    url: ""
+    url: gs://romain-dev-reports-6bd84da1-3c04-467b-9461-afd6fcc3f93a
   repository:
     enabled: true
-    url: ""
+    url: gs://romain-dev-repository-45dad612-ba6b-46da-a394-2a39295a0
 versionStream:
   ref: master
   url: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git
