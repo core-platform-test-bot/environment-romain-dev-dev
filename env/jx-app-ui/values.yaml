@@ -1,0 +1,9 @@
+jxui:
+  ingress:
+    create: true
+  sso:
+    certIssuerName: letsencrypt-prod
+    create: false
+    domain: 35.205.140.56.nip.io
+    oidcIssuerUrl: https://
+  subdomain: dashboard
